@@ -2,7 +2,7 @@
 let userForm = new UserForm();
 userForm.loginFormCallback = function f (data){
     if (data){
-      ApiConnectors.login(data, callback);  
+      ApiConnectors.login({data.login, data.password}, callback);  
     }
 }
 */
