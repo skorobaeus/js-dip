@@ -5,9 +5,7 @@ userForm.loginFormCallback = function f (data){
       ApiConnectors.login({data.login, data.password}, callback);  
     }
 }
-
-
-/*
+/*Вопросы по тексту ниже.
 ## Реализация задания
 1. Подключите строгий режим выполнения кода. - подключил.
 2. Создайте объект класса `UserForm`. - создал.
