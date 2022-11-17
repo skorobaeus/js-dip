@@ -1,11 +1,11 @@
-/*'use strict'
+'use strict'
 
 let userForm = new UserForm();
 userForm.loginFormCallback = function f (data){
     if (data !== null){
-      ApiConnectors.login(data, callback);  
+      ApiConnector.login(data, callback);  
     }
-}*/
+}
 /*Вопросы по тексту ниже.
 
 ## Реализация задания
