@@ -12,6 +12,18 @@ userForm.loginFormCallback = function f (data){
     }
 }
 
+userForm.registerFormCallback = function f (data) {
+  if (data !== null){
+    ApiConnector.register({data.login, data.password}, (response) => {});
+  }
+  if (response === success){
+        location.reload();
+    } else {
+      console.log(response);
+    }
+}
+
+
 /*Вопросы по тексту ниже.
 
 ## Реализация задания
