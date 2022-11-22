@@ -8,19 +8,19 @@ userForm.loginFormCallback = function f (data){
     if (response.success){
         location.reload();
     } else {
-      console.log(response);
+      userForm.setLoginErrorMessage(`Пользователь c логином ${login} и указанным паролем ${password} не найден`);
     }
 }
 
 userForm.registerFormCallback = function f (data) {
   if (data !== null){
-    ApiConnector.login({ login: data.login, password: data.password }, (response) => console.log(response));
+    ApiConnector.register({ login: data.login, password: data.password }, (response) => console.log(response));
     
   }
 if (response.success){
         location.reload();
     } else {
-      console.log(response);
+      setRegisterErrorMessage(`Логин ${login} уже существует.`);
     }
 }
 
