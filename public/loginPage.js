@@ -8,7 +8,7 @@ userForm.loginFormCallback = function f (data){
     if (response.success){
         location.reload();
     } else {
-      userForm.setLoginErrorMessage(`Пользователь c логином ${login} и указанным паролем ${password} не найден`);
+      userForm.setLoginErrorMessage(response.error);
     }
 }
 
@@ -20,7 +20,7 @@ userForm.registerFormCallback = function f (data) {
 if (response.success){
         location.reload();
     } else {
-      setRegisterErrorMessage(`Логин ${login} уже существует.`);
+      setRegisterErrorMessage(response.error);
     }
 }
 
