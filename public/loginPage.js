@@ -3,7 +3,7 @@
 let userForm = new UserForm();
 userForm.loginFormCallback = function f (data){
     if (data !== null){
-      ApiConnector.login({ login: data.login, password: data.password }, (response) => console.log(response));
+      ApiConnector.login({ login: data.login, password: data.password }, (response) => console.log(response.error));
     }
     if (response.success){
         location.reload();
@@ -14,7 +14,7 @@ userForm.loginFormCallback = function f (data){
 
 userForm.registerFormCallback = function f (data) {
   if (data !== null){
-    ApiConnector.register({ login: data.login, password: data.password }, (response) => console.log(response));
+    ApiConnector.register({ login: data.login, password: data.password }, (response) => console.log(response.error));
     
   }
 if (response.success){
