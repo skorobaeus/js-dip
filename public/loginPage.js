@@ -5,7 +5,7 @@ userForm.loginFormCallback = function f (data){
     if (data !== null){
       ApiConnector.login({ login: data.login, password: data.password }, (response) => console.log(response));
     }
-    if (response.success){
+    if (response.success == true){
         location.reload();
     } else {
       userForm.setLoginErrorMessage(response.error);
@@ -17,7 +17,7 @@ userForm.registerFormCallback = function f (data) {
     ApiConnector.register({ login: data.login, password: data.password }, (response) => console.log(response));
     
   }
-if (response.success){
+if (response.success == true){
         location.reload();
     } else {
       setRegisterErrorMessage(response.error);
