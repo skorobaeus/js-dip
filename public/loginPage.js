@@ -15,7 +15,6 @@ userForm.registerFormCallback = function f (data) {
 }
 
 
-/*Вопросы по тексту ниже.
 
 ## Реализация задания
 
